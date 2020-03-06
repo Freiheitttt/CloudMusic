@@ -1,31 +1,18 @@
 <template>
-  <nav-bar class="nav-item">
-    <div
-      slot="left"
-      class="logo"
-    ></div>
-    <div
-      slot="center"
-      class="title"
-    >
+  <div class="nav-item">
+    <div class="logo"></div>
+    <div class="title">
       <span>CloudMusic</span>
     </div>
-    <div
-      class="settings"
-      slot="right"
-    ></div>
-  </nav-bar>
+    <div class="settings">
+    </div>
+  </div>
 
 </template>
 
 <script>
-import NavBar from "../common/navbar/NavBar";
-
 export default {
   name: "MainHeader",
-  components: {
-    NavBar
-  },
   data() {
     return {};
   }
@@ -34,11 +21,18 @@ export default {
 
 <style scoped>
 .nav-item {
+  display: flex;
+  text-align: center;
+  line-height: 4rem;
+  height: 4rem;
+  box-shadow: 0 2px 2px rgba(100, 100, 100, 0.2);
+  background-color: mintcream;
+}
+.title {
   flex: 1;
 }
 .nav-item img {
-  width: 2.8rem;
-  text-align: center;
+  width: 3rem;
 }
 .nav-item .title span {
   font-size: 22px;
@@ -47,15 +41,15 @@ export default {
   color: black;
 }
 .nav-item .logo {
-  height: 4rem;
-  background-image: url(../../assets/image/logo.svg);
+  width: 5.5rem;
+  background-image: url(../../../assets/image/logo.svg);
   background-position: center center;
   background-size: 3rem;
   background-repeat: no-repeat;
 }
 .nav-item .settings {
-  height: 4rem;
-  background-image: url(../../assets/image/settings.svg);
+  width: 5.5rem;
+  background-image: url(../../../assets/image/settings.svg);
   background-position: center center;
   background-size: 3rem;
   background-repeat: no-repeat;

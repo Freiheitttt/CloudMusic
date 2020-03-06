@@ -1,20 +1,16 @@
 <template>
   <div id="app">
-    <main-header />
-    <main-nav-bar />
+    <nav-bar />
     <router-view></router-view>
   </div>
 </template>
 
 <script>
-import MainHeader from "./components/content/MainHeader";
-import MainNavBar from "./components/content/MainNavBar";
-
+import NavBar from "./components/Screen/NavBar";
 export default {
   name: "app",
   components: {
-    MainHeader,
-    MainNavBar
+    NavBar
   }
 };
 </script>

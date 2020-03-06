@@ -12,12 +12,9 @@
 </template>
 
 <script>
-import NavBar from "../common/navbar/NavBar";
 export default {
   name: "MainNavBar",
-  components: {
-    NavBar
-  },
+
   data() {
     return {
       titles: [
@@ -51,7 +48,6 @@ export default {
 
 <style scoped>
 .nav-list {
-  display: flex;
   text-align: center;
   line-height: 3rem;
   height: 3rem;
