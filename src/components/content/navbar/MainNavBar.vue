@@ -1,14 +1,17 @@
 <template>
   <div class="nav-list">
-    <ul class="title">
-      <li
-        class="item"
-        @click="itemClick"
-        v-for="item in titles"
-      ><span>{{item.title}}</span>
-      </li>
-    </ul>
+    <div
+      v-for="(item, index) in titles"
+      class="item"
+      :key="index"
+      :class="{ active: index === currentIndex }"
+    >
+      <router-link :to="item.path">
+        <span>{{item.title}}</span>
+      </router-link>
+    </div>
   </div>
+
 </template>
 
 <script>
@@ -17,32 +20,28 @@ export default {
 
   data() {
     return {
+      currentIndex: 0,
       titles: [
         {
           title: "我的音乐",
-          href: "#1"
+          path: "/home"
         },
         {
           title: "推荐",
-          href: "#2"
+          path: "/recommend"
         },
         {
           title: "排行榜",
-          href: "#3"
+          path: "/chart"
         },
         {
           title: "歌单",
-          href: "#4"
+          path: "/songList"
         }
       ]
     };
   },
-  methods: {
-    itemClick() {
-      this.$router.currentRoute.path == this.path ||
-        this.$router.replace(this.path);
-    }
-  }
+  methods: {}
 };
 </script>
 
@@ -52,19 +51,16 @@ export default {
   line-height: 3rem;
   height: 3rem;
 }
-.nav-list .title {
+.nav-list {
   display: flex;
   width: 100%;
 }
-.nav-list .title .item {
+.nav-list .item {
   flex: 1;
   list-style: none;
 }
-.nav-list .title .item:hover {
-  border-bottom: 2px;
-}
 
-.nav-list .title .item span {
+.nav-list .item span {
   font-size: 14px;
   font-weight: bold;
 }
