@@ -3,21 +3,18 @@
     <main-header />
     <main-nav-bar />
   </div>
-
 </template>
 
 <script>
-import MainHeader from "../content/navbar/MainHeader";
-import MainNavBar from "../content/navbar/MainNavBar";
+import MainHeader from '../content/navbar/MainHeader'
+import MainNavBar from '../content/navbar/MainNavBar'
 export default {
-  name: "NavBar",
+  name: 'NavBar',
   components: {
     MainHeader,
     MainNavBar
   }
-};
+}
 </script>
 
-<style scoped>
-</style>
-
+<style scoped></style>

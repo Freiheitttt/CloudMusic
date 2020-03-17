@@ -13,7 +13,7 @@
 <script>
 export default {
   name: "MainHeader",
-  data() {
+  data () {
     return {};
   }
 };
@@ -23,8 +23,8 @@ export default {
 .nav-item {
   display: flex;
   text-align: center;
-  line-height: 4rem;
-  height: 4rem;
+  line-height: 3rem;
+  height: 3rem;
   box-shadow: 0 2px 2px rgba(100, 100, 100, 0.2);
   background-color: mintcream;
 }
@@ -38,20 +38,20 @@ export default {
   font-size: 22px;
   font-family: "Times New Roman", Times, serif;
   font-weight: bold;
-  color: black;
+  color: rgb(185, 88, 88);
 }
 .nav-item .logo {
   width: 5.5rem;
-  background-image: url(../../../assets/image/logo.svg);
-  background-position: center center;
-  background-size: 3rem;
+  background-image: url(../../../assets/image/setting.svg);
+  background-position: center;
+  background-size: 1.8rem;
   background-repeat: no-repeat;
 }
 .nav-item .settings {
   width: 5.5rem;
-  background-image: url(../../../assets/image/settings.svg);
-  background-position: center center;
-  background-size: 3rem;
+  background-image: url(../../../assets/image/search.svg);
+  background-position: center;
+  background-size: 2rem;
   background-repeat: no-repeat;
 }
 </style>
