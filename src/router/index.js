@@ -9,7 +9,8 @@ const Recommend = () =>
     import ('../views/recommend/Recommend')
 const SongList = () =>
     import ('../views/songList/SongList')
-
+const Like = () =>
+    import ('../views/home/ChildHome/Like')
 Vue.use(VueRouter)
 
 const routes = [{
@@ -31,6 +32,10 @@ const routes = [{
     {
         path: '/songList',
         component: SongList
+    },
+    {
+        path: '/like',
+        component: Like
     },
 ]
 
